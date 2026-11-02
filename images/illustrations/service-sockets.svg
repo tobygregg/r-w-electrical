@@ -1,0 +1,25 @@
+<svg class="svc-art h-auto w-full" viewBox="0 0 360 260" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <rect x="10" y="10" width="340" height="240" rx="22" fill="#EEF0FF"/>
+  <!-- double socket -->
+  <rect x="40" y="62" width="176" height="96" rx="14" fill="#fff" stroke="#0B0C10" stroke-width="2.5"/>
+  <g fill="#0B0C10">
+    <rect x="72" y="82" width="7" height="18" rx="1"/><rect x="58" y="112" width="15" height="7" rx="1"/><rect x="78" y="112" width="15" height="7" rx="1"/>
+    <rect x="152" y="82" width="7" height="18" rx="1"/><rect x="138" y="112" width="15" height="7" rx="1"/><rect x="158" y="112" width="15" height="7" rx="1"/>
+  </g>
+  <rect x="108" y="80" width="12" height="22" rx="3" fill="#0D21FF" stroke="#0B0C10" stroke-width="2"/>
+  <rect x="188" y="80" width="12" height="22" rx="3" fill="#fff" stroke="#0B0C10" stroke-width="2"/>
+  <!-- USB -->
+  <g stroke="#0B0C10" stroke-width="2" fill="#fff"><rect x="100" y="132" width="14" height="8" rx="2"/><rect x="120" y="132" width="14" height="8" rx="2"/></g>
+  <!-- plug lead -->
+  <path d="M128 158v68" stroke="#0B0C10" stroke-width="2.5"/><path class="flow" d="M128 158v68" stroke="#0D21FF" stroke-width="2.5"/><path d="M40 226h176" stroke="#0B0C10" stroke-width="2.5"/>
+  <!-- light switch -->
+  <rect x="244" y="62" width="84" height="84" rx="14" fill="#fff" stroke="#0B0C10" stroke-width="2.5"/>
+  <rect x="262" y="78" width="22" height="52" rx="5" fill="#F3F4F8" stroke="#0B0C10" stroke-width="2"/>
+  <rect x="290" y="78" width="22" height="52" rx="5" fill="#F3F4F8" stroke="#0B0C10" stroke-width="2"/>
+  <path d="M266 96h14M294 112h14" stroke="#0B0C10" stroke-width="2"/>
+  <!-- outdoor socket -->
+  <rect x="252" y="168" width="68" height="58" rx="10" fill="#fff" stroke="#0B0C10" stroke-width="2.5"/>
+  <path d="M252 186h68" stroke="#0B0C10" stroke-width="2"/>
+  <circle cx="286" cy="206" r="10" stroke="#0D21FF" stroke-width="2.5"/>
+  <g stroke="#8A8C93" stroke-width="1.5"><path d="M28 62h8M40 48v8M220 166h8M216 168v8"/></g>
+</svg>

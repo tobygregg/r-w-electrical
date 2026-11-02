@@ -1,0 +1,142 @@
+/* ==========================================================================
+   R.W Electrical — Tailwind source
+   Build: npm run build   (outputs assets/css/styles.css)
+   ========================================================================== */
+
+/* Fonts — self-hosted from @fontsource (OFL, licences in assets/fonts/) */
+@font-face {
+  font-family: 'Saira Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  font-stretch: 50% 125%;
+  src: url(../fonts/saira-latin-standard-normal.woff2) format('woff2-variations'), url(../fonts/saira-latin-standard-normal.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Public Sans Variable';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(../fonts/public-sans-latin-wght-normal.woff2) format('woff2-variations'), url(../fonts/public-sans-latin-wght-normal.woff2) format('woff2');
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body { @apply bg-paper text-ink font-sans antialiased; text-rendering: optimizeLegibility; }
+  h1, h2, h3, .font-display { font-family: theme('fontFamily.display'); font-stretch: 112%; letter-spacing: -0.01em; }
+  [id] { scroll-margin-top: 5.5rem; }
+  ::selection { background: theme('colors.volt.500'); color: #fff; }
+  :focus-visible { outline: 3px solid theme('colors.volt.500'); outline-offset: 3px; border-radius: 6px; }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-site px-5 sm:px-8; }
+
+  /* Small uppercase label — spaced like "ELECTRICAL CONTRACTORS" in the logo */
+  .label { @apply font-display text-[0.72rem] font-semibold uppercase text-volt-500; letter-spacing: .28em; font-stretch: 118%; }
+
+  .btn { @apply inline-flex min-h-[48px] items-center justify-center gap-2.5 rounded-xl px-5 py-3 font-semibold transition duration-200 ease-out; }
+  .btn svg { @apply h-5 w-5 shrink-0; }
+  .btn-primary { @apply btn bg-volt-500 text-white shadow-[0_10px_24px_-12px_rgba(13,33,255,.7)] hover:-translate-y-0.5 hover:bg-volt-600; }
+  .btn-ghost { @apply btn border border-graphite-line bg-white text-ink hover:-translate-y-0.5 hover:border-volt-300 hover:text-volt-600; }
+  .btn-light { @apply btn bg-white text-ink hover:-translate-y-0.5 hover:bg-volt-50; }
+  .btn-outline-light { @apply btn border border-white/25 text-white hover:-translate-y-0.5 hover:border-white/60; }
+
+  .field { @apply block w-full rounded-xl border border-graphite-line bg-white px-4 py-3 text-base text-ink placeholder:text-graphite-light transition focus:border-volt-500 focus:outline-none focus:ring-4 focus:ring-volt-100; }
+  .field[aria-invalid="true"] { @apply border-red-600 ring-4 ring-red-100; }
+
+  /* Hairline "drafting" corner ticks, borrowed from the logo's construction lines */
+  .ticks { position: relative; }
+  .ticks::before, .ticks::after { content: ''; position: absolute; width: 18px; height: 18px; pointer-events: none; border-color: theme('colors.graphite.light'); }
+  .ticks::before { top: -7px; left: -7px; border-top: 1.5px solid; border-left: 1.5px solid; }
+  .ticks::after { bottom: -7px; right: -7px; border-bottom: 1.5px solid; border-right: 1.5px solid; }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(13,33,255,.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(13,33,255,.06) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .bg-dots { background-image: radial-gradient(rgba(13,33,255,.18) 1.2px, transparent 1.4px); background-size: 22px 22px; }
+  .no-scrollbar { scrollbar-width: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+}
+
+/* --------------------------------------------------------------------------
+   Reveal on scroll (JS adds .is-in; stagger via --d)
+   -------------------------------------------------------------------------- */
+.js [data-reveal] { opacity: 0; transform: translateY(18px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0ms); }
+.js [data-reveal].is-in { opacity: 1; transform: none; }
+
+/* --------------------------------------------------------------------------
+   Hero illustration — breaker flips on, current runs, lamp and socket light
+   7s loop. All timings share one cycle so the story stays in sync.
+   -------------------------------------------------------------------------- */
+.hero-art .toggle { transform-box: fill-box; animation: toggle 7s cubic-bezier(.5,0,.2,1) infinite; }
+.hero-art .pulse { stroke-dasharray: 16 140; stroke-dashoffset: 16; opacity: 0; animation: pulse 7s linear infinite; }
+.hero-art .pulse-b { animation-delay: .25s; }
+.hero-art .lamp-glow { opacity: 0; transform-box: fill-box; transform-origin: 50% 30%; animation: lamp 7s ease-in-out infinite; }
+.hero-art .bulb { animation: bulb 7s ease-in-out infinite; }
+.hero-art .led { animation: led 7s ease-in-out infinite; }
+.hero-art .cable-live { stroke-dasharray: 100; stroke-dashoffset: 100; animation: live 7s ease-in-out infinite; }
+.hero-art .float { animation: floaty 6s ease-in-out infinite; }
+.hero-art .float-2 { animation: floaty 7s ease-in-out -2s infinite; }
+
+@keyframes toggle { 0%, 10% { transform: translateY(14px); } 16%, 90% { transform: translateY(0); } 96%, 100% { transform: translateY(14px); } }
+@keyframes pulse { 0%, 16% { stroke-dashoffset: 16; opacity: 0; } 17% { opacity: 1; } 44% { stroke-dashoffset: -100; opacity: 1; } 46%, 100% { stroke-dashoffset: -100; opacity: 0; } }
+@keyframes live { 0%, 18% { stroke-dashoffset: 100; opacity: 1; } 44%, 88% { stroke-dashoffset: 0; opacity: 1; } 94%, 100% { stroke-dashoffset: 0; opacity: 0; } }
+@keyframes lamp { 0%, 42% { opacity: 0; transform: scale(.85); } 50% { opacity: 1; transform: scale(1); } 70% { opacity: .85; transform: scale(.97); } 88% { opacity: 1; transform: scale(1); } 95%, 100% { opacity: 0; transform: scale(.9); } }
+@keyframes bulb { 0%, 42% { fill: #fff; } 48%, 90% { fill: #FFCF4A; } 96%, 100% { fill: #fff; } }
+@keyframes led { 0%, 44% { fill: #D9DBE3; } 50%, 90% { fill: #0D21FF; } 96%, 100% { fill: #D9DBE3; } }
+@keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
+/* Service panel art: gentle current flow + glows */
+.svc-art .flow { stroke-dasharray: 6 10; animation: dash 1.6s linear infinite; }
+.svc-art .glow-a { animation: breathe 3.6s ease-in-out infinite; }
+.svc-art .glow-b { animation: breathe 3.6s ease-in-out -1.2s infinite; }
+.svc-art .glow-c { animation: breathe 3.6s ease-in-out -2.4s infinite; }
+.svc-art .blink { animation: blink 2.4s steps(1) infinite; }
+.svc-art .spark { transform-box: fill-box; transform-origin: center; animation: spark 1.8s ease-in-out infinite; }
+.svc-art .tick-draw { stroke-dasharray: 30; stroke-dashoffset: 30; animation: draw .5s ease-out forwards; }
+.svc-art .tick-draw:nth-of-type(2) { animation-delay: .25s; }
+.svc-art .tick-draw:nth-of-type(3) { animation-delay: .5s; }
+.svc-art .tick-draw:nth-of-type(4) { animation-delay: .75s; }
+@keyframes dash { to { stroke-dashoffset: -32; } }
+@keyframes breathe { 0%, 100% { opacity: .55; } 50% { opacity: 1; } }
+@keyframes blink { 0%, 60% { opacity: 1; } 61%, 100% { opacity: .25; } }
+@keyframes spark { 0%, 100% { transform: scale(.7); opacity: .4; } 50% { transform: scale(1.1); opacity: 1; } }
+@keyframes draw { to { stroke-dashoffset: 0; } }
+
+/* Service panel switching */
+.svc-panel[hidden] { display: none; }
+.svc-panel.is-active { animation: fade-up .45s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes fade-up { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+/* Running cable divider under the hero and in the steps */
+.cable-pulse { stroke-dasharray: 10 90; animation: cable 4.5s linear infinite; }
+@keyframes cable { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+
+/* Mobile menu */
+.menu-panel { transition: opacity .25s ease, transform .3s cubic-bezier(.2,.7,.2,1), visibility .3s; }
+.menu-panel:not(.is-open) { opacity: 0; transform: translateY(-8px); visibility: hidden; pointer-events: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+  .js [data-reveal] { opacity: 1; transform: none; }
+  .hero-art .lamp-glow { opacity: 1; }
+  .hero-art .bulb { fill: #FFCF4A; }
+  .hero-art .toggle { transform: none; }
+  .hero-art .pulse { opacity: 0; }
+  .hero-art .cable-live { stroke-dashoffset: 0; }
+}
+
+/* Sticky mobile bar: slides in once the hero buttons have scrolled away */
+.mobile-bar { transition: transform .35s cubic-bezier(.2,.7,.2,1); }
+.js .mobile-bar:not(.is-shown) { transform: translateY(110%); }

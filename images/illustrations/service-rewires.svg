@@ -1,0 +1,20 @@
+<svg class="svc-art h-auto w-full" viewBox="0 0 360 260" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <rect x="10" y="10" width="340" height="240" rx="22" fill="#EEF0FF"/>
+  <path d="M62 112L180 44l118 68" stroke="#0B0C10" stroke-width="2.5"/>
+  <rect x="78" y="104" width="204" height="122" fill="#fff" stroke="#0B0C10" stroke-width="2.5"/>
+  <path d="M78 166h204M180 104v122" stroke="#0B0C10" stroke-width="2"/>
+  <path d="M60 226h240" stroke="#0B0C10" stroke-width="2.5"/>
+  <!-- board -->
+  <rect x="92" y="190" width="26" height="22" rx="3" fill="#0D21FF" stroke="#0B0C10" stroke-width="2"/>
+  <!-- cable runs -->
+  <path class="flow" d="M118 200h40v-30h-30v-46M158 170h0M118 200h120v-26M238 174h18M150 170V124M238 174v-50h-36v6M238 124h18" stroke="#0D21FF" stroke-width="2.5"/>
+  <!-- lights -->
+  <g fill="#fff" stroke="#0B0C10" stroke-width="2">
+    <circle cx="128" cy="130" r="6"/><circle cx="202" cy="134" r="6"/><circle cx="150" cy="128" r="0"/>
+  </g>
+  <g fill="#FFCF4A"><circle class="glow-a" cx="128" cy="130" r="3"/><circle class="glow-b" cx="202" cy="134" r="3"/></g>
+  <!-- sockets -->
+  <g fill="#fff" stroke="#0B0C10" stroke-width="2"><rect x="250" y="168" width="16" height="12" rx="2"/><rect x="250" y="118" width="16" height="12" rx="2"/><rect x="144" y="164" width="14" height="0"/></g>
+  <!-- ticks -->
+  <g stroke="#8A8C93" stroke-width="1.5"><path d="M66 104h8M78 92v8M286 104h8M282 92v8"/></g>
+</svg>

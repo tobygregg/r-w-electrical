@@ -1,0 +1,19 @@
+<svg class="svc-art h-auto w-full" viewBox="0 0 360 260" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <rect x="10" y="10" width="340" height="240" rx="22" fill="#EEF0FF"/>
+  <!-- clipboard -->
+  <rect x="50" y="40" width="150" height="196" rx="12" fill="#fff" stroke="#0B0C10" stroke-width="2.5"/>
+  <rect x="94" y="30" width="62" height="22" rx="6" fill="#0D21FF" stroke="#0B0C10" stroke-width="2"/>
+  <g stroke="#0B0C10" stroke-width="2" fill="#fff"><rect x="68" y="78" width="16" height="16" rx="3"/><rect x="68" y="114" width="16" height="16" rx="3"/><rect x="68" y="150" width="16" height="16" rx="3"/><rect x="68" y="186" width="16" height="16" rx="3"/></g>
+  <g stroke="#D9DBE3" stroke-width="4"><path d="M96 86h80M96 122h66M96 158h76M96 194h56"/></g>
+  <g stroke="#0D21FF" stroke-width="3">
+    <path class="tick-draw" d="M71 86l4 4 7-8"/><path class="tick-draw" d="M71 122l4 4 7-8"/><path class="tick-draw" d="M71 158l4 4 7-8"/><path class="tick-draw" d="M71 194l4 4 7-8"/>
+  </g>
+  <!-- tester -->
+  <rect x="222" y="70" width="98" height="150" rx="14" fill="#fff" stroke="#0B0C10" stroke-width="2.5"/>
+  <rect x="236" y="86" width="70" height="40" rx="5" fill="#0B0C10"/>
+  <path d="M246 112l10-14 10 10 10-16 10 12" stroke="#5B6BFF" stroke-width="2.5"/>
+  <g fill="#F3F4F8" stroke="#0B0C10" stroke-width="2"><rect x="236" y="140" width="30" height="20" rx="4"/><rect x="276" y="140" width="30" height="20" rx="4"/><rect x="236" y="168" width="30" height="20" rx="4"/></g>
+  <rect x="276" y="168" width="30" height="20" rx="4" fill="#0D21FF" stroke="#0B0C10" stroke-width="2"/>
+  <path d="M244 204h54" stroke="#BCC3FF" stroke-width="4"/>
+  <g stroke="#8A8C93" stroke-width="1.5"><path d="M208 70h8M222 56v8M324 220h8M320 224v8"/></g>
+</svg>

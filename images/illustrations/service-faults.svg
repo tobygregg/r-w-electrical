@@ -1,0 +1,26 @@
+<svg class="svc-art h-auto w-full" viewBox="0 0 360 260" fill="none" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <rect x="10" y="10" width="340" height="240" rx="22" fill="#EEF0FF"/>
+  <!-- broken circuit -->
+  <path d="M34 70h66" stroke="#0B0C10" stroke-width="2.5"/>
+  <path d="M132 70h66" stroke="#0B0C10" stroke-width="2.5"/>
+  <path class="flow" d="M34 70h66" stroke="#0D21FF" stroke-width="2.5"/>
+  <circle cx="100" cy="70" r="4" fill="#fff" stroke="#0B0C10" stroke-width="2"/>
+  <circle cx="132" cy="70" r="4" fill="#fff" stroke="#0B0C10" stroke-width="2"/>
+  <g class="spark" stroke="#FFCF4A" stroke-width="2.5"><path d="M116 52v8M116 80v8M104 58l5 5M128 58l-5 5M104 82l5-5M128 82l-5-5"/></g>
+  <path d="M198 70h18" stroke="#0B0C10" stroke-width="2.5"/>
+  <circle cx="228" cy="70" r="12" fill="#fff" stroke="#0B0C10" stroke-width="2.5"/>
+  <path d="M220 62l16 16M236 62l-16 16" stroke="#8A8C93" stroke-width="2"/>
+  <!-- probes -->
+  <path d="M238 226C180 232 100 200 100 112" stroke="#0B0C10" stroke-width="2.5"/>
+  <path d="M286 226c18-30-6-60-60-66-60-6-94-14-94-48" stroke="#0D21FF" stroke-width="2.5"/>
+  <path d="M100 112V84M132 112V84" stroke="#0B0C10" stroke-width="6"/>
+  <path d="M100 84v-6M132 84v-6" stroke="#0B0C10" stroke-width="2"/>
+  <!-- meter -->
+  <rect x="210" y="106" width="104" height="132" rx="14" fill="#fff" stroke="#0B0C10" stroke-width="2.5"/>
+  <rect x="224" y="120" width="76" height="34" rx="5" fill="#0B0C10"/>
+  <path class="blink" d="M236 137h14M258 137h14" stroke="#5B6BFF" stroke-width="4"/>
+  <circle cx="262" cy="190" r="20" fill="#F3F4F8" stroke="#0B0C10" stroke-width="2.5"/>
+  <path d="M262 190l11-11" stroke="#0D21FF" stroke-width="3"/>
+  <circle cx="238" cy="226" r="4" fill="#0B0C10"/><circle cx="286" cy="226" r="4" fill="#0D21FF"/>
+  <g stroke="#8A8C93" stroke-width="1.5"><path d="M196 106h8M210 92v8"/></g>
+</svg>
